@@ -5,7 +5,7 @@ class HomeworkKtTest {
     @org.junit.Test
     fun commissionPercentage() {
         //Arrange
-        val testAmount = 1000
+        val testAmount = 1001
         val testAmountPastTransfer = 10.0
         val testTransferMethod = PAY_CARD_MIR
 
