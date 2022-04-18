@@ -15,8 +15,8 @@ val comissionSumm = 3500
 fun main() {
 
     val transferAmount = 10        // Сумма перевода
-    var amount = transferAmount * 100 // Переводим в копейки
-    val amountPastTransfers: Double = 0.0
+    val amount = transferAmount * 100 // Переводим в копейки
+    val amountPastTransfers = 0.0
     val transferMethod = "Maestro"         // Система перевода
     val commissionAmount: Double = when (transferMethod) {   //Стандартная Скидка системы перевода %
         PAY_CARD_MASTERCARD, PAY_CARD_MAESTRO -> .06
@@ -38,11 +38,11 @@ fun main() {
     val translation = commissionPercentage(amount, amountPastTransfers, transferMethod)
     println(
         "Сумма перевода составляет: ${translation / 100} рублей " +
-                "сумма комиссии за перевод: ${resultComission } копеек"
+                "сумма комиссии за перевод: $resultComission копеек"
     )
 }
 
-public fun commissionPercentage(
+fun commissionPercentage(
     amount: Int,
     amountPastTransferts: Double,
     transferMethod: String,
